@@ -2,9 +2,15 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "画像拡張子変換ツール | PNG・JPG・WEBPをブラウザで変換",
+  title: {
+    default: "画像拡張子変換ツール | PNG・JPG・WEBPをブラウザで一括変換",
+    template: "%s | 画像拡張子変換ツール"
+  },
   description:
-    "PNG、JPG、JPEG、WEBP、GIF、BMPなどの画像を、ブラウザ内でPNG・JPG・WEBPへまとめて変換できる無料の画像拡張子変換ツールです。画像はサーバーに保存されません。",
+    "PNG、JPG、JPEG、WEBP、GIF、BMPなどの画像を、PNG・JPG・WEBPへまとめて変換できる画像拡張子変換ツールです。処理はブラウザ内で完結し、画像をサーバーに保存しません。",
+  applicationName: "画像拡張子変換ツール",
+  creator: "Quick File Converter",
+  publisher: "Quick File Converter",
   keywords: [
     "画像変換",
     "拡張子変換",
@@ -13,22 +19,38 @@ export const metadata: Metadata = {
     "画像コンバーター",
     "ブラウザ変換"
   ],
+  icons: {
+    icon: [
+      {
+        url: "/favicon.png",
+        type: "image/png"
+      }
+    ],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png"
+  },
   openGraph: {
-    title: "画像拡張子変換ツール",
+    title: "画像拡張子変換ツール | PNG・JPG・WEBPをブラウザで一括変換",
     description:
-      "複数画像をPNG・JPG・WEBPへ一括変換。処理はブラウザ内で完結し、元画像はサーバーに保存されません。",
+      "複数の画像をPNG・JPG・WEBPへ簡単に一括変換。処理はブラウザ内で完結し、元画像はサーバーに保存されません。",
     type: "website",
     locale: "ja_JP",
     siteName: "画像拡張子変換ツール"
   },
   twitter: {
     card: "summary_large_image",
-    title: "画像拡張子変換ツール",
-    description: "PNG・JPG・WEBPへ直感的に変換できるブラウザ完結型ツール。"
+    title: "画像拡張子変換ツール | PNG・JPG・WEBPを一括変換",
+    description: "PNG・JPG・WEBPへ直感的に変換できる、ブラウザ完結型の画像変換ツール。"
   },
   robots: {
     index: true,
-    follow: true
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
   }
 };
 
